@@ -59,6 +59,6 @@ The skills have format validation and manual instruction review. A controlled st
 
 ## Scope, attribution, and license
 
-The original workflow used Claude with human scientific direction. This project's examples, case-study replication, skills, and packaging were prepared with Codex assistance. This collection documents the CLLN project’s simulation and verification workstream.
+The original workflow used Claude with human scientific direction. This collection documents the CLLN project’s simulation and verification workstream.
 
 The ngspice patch is supplied with [upstream attribution](third_party/NOTICE.md), a pinned build recipe, and measured scope. No ngspice binaries or full upstream source tree are redistributed. Our code is BSD-3-Clause; third-party notices remain applicable. See [CONTRIBUTING.md](CONTRIBUTING.md).
