@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "command": "python -m simcheck.shared_benchmark run LIBRARIES --out RUN",
+  "seed": 0,
+  "source_revision": "sha256:584c8cae2451533ee4f784b887e4e1b9e937d775b6d210e230c2e67bd84a53a5",
+  "config": {
+    "scope": "generic diode-bank study",
+    "source_tag": "ngspice-47"
+  },
+  "artifacts": [
+    {
+      "path": "comparisons.csv",
+      "sha256": "3f36038d52396db7f0dd287928937072d599010260ce12c08719e774e61523e0"
+    },
+    {
+      "path": "ngspice41-stock.json",
+      "sha256": "498c68ca0ce19057ecbe1edb39faa834bbd54ce9780e9b218c9ae50f264f85f5"
+    },
+    {
+      "path": "ngspice47-localpatch.json",
+      "sha256": "c393d8869f6e43606c6c13914f27a0e60026417e37c77c40518bec1172335722"
+    },
+    {
+      "path": "ngspice47-stock.json",
+      "sha256": "f0794f88ab3444ec74608fcf7e4ab8d90b165e5b6bd9f54d85f17b6c9acdeea3"
+    },
+    {
+      "path": "source-build.json",
+      "sha256": "c0b49e66b0e04d6971f1d311cee16ad87e8d75681e5cf3b3285c0d35b2becdc1"
+    },
+    {
+      "path": "summary.json",
+      "sha256": "50252ca730723b2a6114f8df332affdeed0968ac982e2e8ce05a4183e1830db9"
+    },
+    {
+      "path": "timings.csv",
+      "sha256": "8f53a0d9d4af860b25cd88e2202cd9254ba0dabdc39a8b3e319d4d386ec4c0ed"
+    }
+  ]
+}

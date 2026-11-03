@@ -1,0 +1,143 @@
+{
+  "reference_label": "ngspice47-stock",
+  "libraries": {
+    "ngspice47-stock": {
+      "version": "ngspice-47",
+      "klu_enabled": true,
+      "library_sha256": "839a9ac4eeebd0dcf1b819c436999357025070700a6e4b3c24d2d27330be8196",
+      "python": "3.11.13"
+    },
+    "ngspice47-localpatch": {
+      "version": "ngspice-47",
+      "klu_enabled": true,
+      "library_sha256": "3b3d29fa6c2f2f13d71214499ca2ba5b0a66bf9cce37ceef03983a332153d502",
+      "python": "3.11.13"
+    },
+    "ngspice41-stock": {
+      "version": "ngspice-41",
+      "klu_enabled": false,
+      "library_sha256": "39d764ca0e3354a4feccc674bb0516221a762ab2433de25902436e4e71dc28b4",
+      "python": "3.11.13"
+    }
+  },
+  "timing_scope": "Synchronous ngspice run command, including wrapper and simulator setup/teardown; excludes alter/read/cleanup",
+  "load_order_by_repetition": [
+    [
+      "ngspice47-stock",
+      "ngspice47-localpatch",
+      "ngspice41-stock"
+    ],
+    [
+      "ngspice41-stock",
+      "ngspice47-localpatch",
+      "ngspice47-stock"
+    ],
+    [
+      "ngspice47-stock",
+      "ngspice47-localpatch",
+      "ngspice41-stock"
+    ]
+  ],
+  "repetitions": 3,
+  "samples_per_repetition": 9,
+  "warmup_solves": 2,
+  "sizes": [
+    128,
+    512,
+    2048
+  ],
+  "comparisons": [
+    {
+      "label": "ngspice47-stock",
+      "branches": 128,
+      "median_op_seconds": 0.00037772953510284424,
+      "p25_op_seconds": 0.00036910921335220337,
+      "p75_op_seconds": 0.00039044395089149475,
+      "reference_to_candidate_ratio": 1.0,
+      "max_all_node_voltage_error_v": 0.0,
+      "parity_passed": true
+    },
+    {
+      "label": "ngspice47-stock",
+      "branches": 512,
+      "median_op_seconds": 0.0017035529017448425,
+      "p25_op_seconds": 0.0016640648245811462,
+      "p75_op_seconds": 0.0018234997987747192,
+      "reference_to_candidate_ratio": 1.0,
+      "max_all_node_voltage_error_v": 0.0,
+      "parity_passed": true
+    },
+    {
+      "label": "ngspice47-stock",
+      "branches": 2048,
+      "median_op_seconds": 0.012557286769151688,
+      "p25_op_seconds": 0.011939503252506256,
+      "p75_op_seconds": 0.014081262052059174,
+      "reference_to_candidate_ratio": 1.0,
+      "max_all_node_voltage_error_v": 0.0,
+      "parity_passed": true
+    },
+    {
+      "label": "ngspice47-localpatch",
+      "branches": 128,
+      "median_op_seconds": 0.0003595612943172455,
+      "p25_op_seconds": 0.0003475695848464966,
+      "p75_op_seconds": 0.00037169456481933594,
+      "reference_to_candidate_ratio": 1.0505289114060443,
+      "max_all_node_voltage_error_v": 0.0,
+      "parity_passed": true
+    },
+    {
+      "label": "ngspice47-localpatch",
+      "branches": 512,
+      "median_op_seconds": 0.0013981759548187256,
+      "p25_op_seconds": 0.0013752616941928864,
+      "p75_op_seconds": 0.0014300048351287842,
+      "reference_to_candidate_ratio": 1.2184109559842269,
+      "max_all_node_voltage_error_v": 0.0,
+      "parity_passed": true
+    },
+    {
+      "label": "ngspice47-localpatch",
+      "branches": 2048,
+      "median_op_seconds": 0.007352251559495926,
+      "p25_op_seconds": 0.006761275231838226,
+      "p75_op_seconds": 0.007878750562667847,
+      "reference_to_candidate_ratio": 1.7079511857742558,
+      "max_all_node_voltage_error_v": 0.0,
+      "parity_passed": true
+    },
+    {
+      "label": "ngspice41-stock",
+      "branches": 128,
+      "median_op_seconds": 0.00021857768297195435,
+      "p25_op_seconds": 0.00021528080105781555,
+      "p75_op_seconds": 0.00022735074162483215,
+      "reference_to_candidate_ratio": 1.7281248934792242,
+      "max_all_node_voltage_error_v": 4.6629367034256575e-15,
+      "parity_passed": true
+    },
+    {
+      "label": "ngspice41-stock",
+      "branches": 512,
+      "median_op_seconds": 0.00196857750415802,
+      "p25_op_seconds": 0.0018947012722492218,
+      "p75_op_seconds": 0.002052437514066696,
+      "reference_to_candidate_ratio": 0.865372533286907,
+      "max_all_node_voltage_error_v": 4.6629367034256575e-15,
+      "parity_passed": true
+    },
+    {
+      "label": "ngspice41-stock",
+      "branches": 2048,
+      "median_op_seconds": 0.020312391221523285,
+      "p25_op_seconds": 0.019791342318058014,
+      "p75_op_seconds": 0.02088393270969391,
+      "reference_to_candidate_ratio": 0.6182081977549653,
+      "max_all_node_voltage_error_v": 4.6629367034256575e-15,
+      "parity_passed": true
+    }
+  ],
+  "passed": true,
+  "limitations": "One host under shared load; library order alternates across repetitions. These workloads stress internal-node housekeeping, not all simulation costs."
+}

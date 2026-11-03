@@ -1,0 +1,9 @@
+{
+  "rows": 45,
+  "draws_per_corner": 5,
+  "nominal_model_temperature_c": 27,
+  "same_parameter_draws_across_corners": true,
+  "trip_fraction_min": 0.4971790683157121,
+  "trip_fraction_max": 0.5252103292632043,
+  "scope": "Illustrative Level-1 model sensitivity; five draws are not a manufacturing-yield estimate"
+}

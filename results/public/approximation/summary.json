@@ -1,0 +1,16 @@
+{
+  "points": 1610,
+  "max_terminal_kcl_error_a": 1.0986199305623037e-20,
+  "max_drain_source_difference_a": 1.0000020000004635e-08,
+  "near_threshold_coarse_relative_error_median": 1.4937759129491415,
+  "near_threshold_coarse_relative_error_max": 249.99937500156327,
+  "relative_error_floor_a": 1e-09,
+  "coarse_gate_grid_v": [
+    0,
+    0.4,
+    0.8,
+    1.2,
+    1.6
+  ],
+  "model_scope": "Illustrative Level-1 model with hard cutoff; no calibrated process or subthreshold claim"
+}

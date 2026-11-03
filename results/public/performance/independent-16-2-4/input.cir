@@ -1,0 +1,47 @@
+Generic diode bank with 16 branches
+VIN in 0 0.8
+.model DB D(IS=1e-12 N=1.2 RS=20)
+.options reltol=1e-7 abstol=1e-14 vntol=1e-9 gmin=1e-12
+R0 in out 1000
+D0 out 0 DB
+R1 in n1 1001
+D1 n1 0 DB
+R2 in n2 1002
+D2 n2 0 DB
+R3 in n3 1003
+D3 n3 0 DB
+R4 in n4 1004
+D4 n4 0 DB
+R5 in n5 1005
+D5 n5 0 DB
+R6 in n6 1006
+D6 n6 0 DB
+R7 in n7 1007
+D7 n7 0 DB
+R8 in n8 1008
+D8 n8 0 DB
+R9 in n9 1009
+D9 n9 0 DB
+R10 in n10 1010
+D10 n10 0 DB
+R11 in n11 1011
+D11 n11 0 DB
+R12 in n12 1012
+D12 n12 0 DB
+R13 in n13 1013
+D13 n13 0 DB
+R14 in n14 1014
+D14 n14 0 DB
+R15 in n15 1015
+D15 n15 0 DB
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+alter VIN dc=0.6
+op
+wrdata result.tsv v(out)
+quit
+.endc
+.end

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+demo-run/
+spice-demo-run/
+.DS_Store
+
+public-run/
+campaign-run/
+fresh-*/

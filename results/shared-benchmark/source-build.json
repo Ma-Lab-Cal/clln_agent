@@ -1,0 +1,10 @@
+{
+  "url": "https://codeload.github.com/imr/ngspice/tar.gz/refs/tags/ngspice-47",
+  "archive_sha256": "815b3dc041418fafab096295a9d12b4f4cca03538082600eb8eef2c594b1328a",
+  "tag": "ngspice-47",
+  "stock_flags": "--with-ngshared --enable-xspice --enable-klu --disable-debug --without-x --with-readline=no",
+  "patch": "third_party/ngspice-47-local-node.patch",
+  "build_jobs": 2,
+  "only_changed_upstream_file": "src/spicelib/analysis/cktdltn.c",
+  "compiler": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+}

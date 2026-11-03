@@ -1,0 +1,22 @@
+name: Check demonstrations
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  numerical-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install independent reference
+        run: sudo apt-get update && sudo apt-get install -y ngspice
+      - name: Test positive cases and fault detection
+        run: python -m unittest discover -s tests -v
+      - name: Reproduce examples with ngspice required
+        run: python -m simcheck demo --out demo-run --require-spice
+      - name: Check generated artifact hashes
+        run: python -m simcheck verify demo-run
+      - name: Reproduce public case studies
+        run: python -m simcheck studies --out public-run
+      - name: Verify public study evidence
+        run: python -m simcheck verify public-run

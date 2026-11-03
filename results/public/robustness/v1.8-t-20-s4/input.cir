@@ -1,0 +1,20 @@
+Generic CMOS inverter; illustrative Level-1 models, no process calibration
+VDD vdd 0 1.8
+VIN in 0 0
+MP out in vdd vdd PGEN W=5u L=1u
+MN out in 0 0 NGEN W=2u L=1u
+CL out 0 1p
+.model NGEN NMOS (LEVEL=1 VTO=0.45102139862 KP=0.0001445699491 LAMBDA=0.02)
+.model PGEN PMOS (LEVEL=1 VTO=-0.438378364497 KP=6.17167034849e-05 LAMBDA=0.02)
+.options reltol=1e-7 abstol=1e-14 vntol=1e-9 gmin=1e-12
+.temp -20
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+dc VIN 0 1.8 0.01
+wrdata result.tsv v(out)
+quit
+.endc
+.end

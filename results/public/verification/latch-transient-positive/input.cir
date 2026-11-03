@@ -1,0 +1,23 @@
+Textbook cross-coupled CMOS latch
+VDD vdd 0 1.8
+MP1 q qb vdd vdd PGEN W=5u L=1u
+MN1 q qb 0 0 NGEN W=2u L=1u
+MP2 qb q vdd vdd PGEN W=5u L=1u
+MN2 qb q 0 0 NGEN W=2u L=1u
+C1 q 0 1p
+C2 qb 0 1p
+.model NGEN NMOS (LEVEL=1 VTO=0.45 KP=150u LAMBDA=0.02)
+.model PGEN PMOS (LEVEL=1 VTO=-0.45 KP=60u LAMBDA=0.02)
+.options reltol=1e-7 abstol=1e-14 vntol=1e-9 gmin=1e-12
+.temp 27
+.ic v(q)=0.90001 v(qb)=0.8999900000000001
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+tran 0.2n 200n uic
+wrdata result.tsv v(q) v(qb)
+quit
+.endc
+.end

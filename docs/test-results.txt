@@ -1,0 +1,22 @@
+test_positive_zero_and_negative_voltage (test_checks.IndependentReference.test_positive_zero_and_negative_voltage) ... ok
+test_an_isolated_matching_step_does_not_pass (test_checks.NumericalChecks.test_an_isolated_matching_step_does_not_pass) ... ok
+test_empty_or_mismatched_vectors_are_errors (test_checks.NumericalChecks.test_empty_or_mismatched_vectors_are_errors) ... ok
+test_gradient_magnitude_error_cannot_hide_behind_cosine (test_checks.NumericalChecks.test_gradient_magnitude_error_cannot_hide_behind_cosine) ... ok
+test_omitted_shunt_conductance_changes_the_solution (test_checks.NumericalChecks.test_omitted_shunt_conductance_changes_the_solution) ... ok
+test_zero_reference_and_nonfinite_values (test_checks.NumericalChecks.test_zero_reference_and_nonfinite_values) ... ok
+test_duplicate_entries_rejected (test_checks.RunRecords.test_duplicate_entries_rejected) ... ok
+test_manifest_paths_cannot_escape_run_root (test_checks.RunRecords.test_manifest_paths_cannot_escape_run_root) ... ok
+test_tampering_and_missing_files_are_detected (test_checks.RunRecords.test_tampering_and_missing_files_are_detected) ... ok
+test_campaign_resume_skips_verified_completed_points (test_workbench.SimulatorIntegration.test_campaign_resume_skips_verified_completed_points) ... ok
+test_input_terminal_supplies_loaded_output_current (test_workbench.SimulatorIntegration.test_input_terminal_supplies_loaded_output_current) ... ok
+test_latch_has_distinct_operating_points (test_workbench.SimulatorIntegration.test_latch_has_distinct_operating_points) ... ok
+test_resume_rejects_changed_artifacts (test_workbench.SimulatorIntegration.test_resume_rejects_changed_artifacts) ... ok
+test_resume_rejects_changed_configuration (test_workbench.SimulatorIntegration.test_resume_rejects_changed_configuration) ... ok
+test_unloaded_truth_table_can_hide_loaded_failure (test_workbench.SimulatorIntegration.test_unloaded_truth_table_can_hide_loaded_failure) ... ok
+test_malformed_columns_are_rejected (test_workbench.TableParsing.test_malformed_columns_are_rejected) ... ok
+test_nonfinite_output_is_rejected (test_workbench.TableParsing.test_nonfinite_output_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.107s
+
+OK

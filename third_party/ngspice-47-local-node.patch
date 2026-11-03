@@ -1,0 +1,16 @@
+--- a/src/spicelib/analysis/cktdltn.c
++++ b/src/spicelib/analysis/cktdltn.c
+@@ -28,10 +28,11 @@
+         controlled_exit(EXIT_FAILURE);
+     }
+ 
+-    prev = NULL;
++    /* Device-local nodes follow this saved boundary. */
++    prev = ckt->prev_CKTlastNode;
+     node = NULL;
+ 
+-    for (n = ckt->CKTnodes; n; n = n->next) {
++    for (n = prev->next; n; n = n->next) {
+         if (n->number == num) {
+             node = n;
+             break;

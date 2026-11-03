@@ -1,0 +1,19 @@
+Generic single MOS device terminal-current audit
+VD d 0 0.3
+VS s 0 0.1
+VG g 0 0
+VB b 0 0
+M1 d g s b NM W=1u L=1u
+.model NM NMOS (LEVEL=1 VTO=0.7 KP=100u LAMBDA=0 GAMMA=0 IS=1e-14)
+.options gmin=1e-08 reltol=1e-8 abstol=1e-16 vntol=1e-10
+.temp 27
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+set numdgt=15
+dc VG 0 1.6 0.01
+wrdata result.tsv i(VD) i(VS) i(VB)
+quit
+.endc
+.end

@@ -1,0 +1,102 @@
+{
+  "comparison": "nine independent CLI processes versus one CLI DC sweep",
+  "timing_scope": "wall time includes process launch, simulation, and readout; not a patch-only speedup",
+  "rows": [
+    {
+      "branches": 16,
+      "repetition": 0,
+      "points": 9,
+      "independent_process_seconds": 0.038218073546886444,
+      "one_sweep_seconds": 0.0041924528777599335,
+      "ratio": 9.11592202970847,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    },
+    {
+      "branches": 16,
+      "repetition": 1,
+      "points": 9,
+      "independent_process_seconds": 0.035940542817115784,
+      "one_sweep_seconds": 0.0036822594702243805,
+      "ratio": 9.760459062632467,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    },
+    {
+      "branches": 16,
+      "repetition": 2,
+      "points": 9,
+      "independent_process_seconds": 0.03681981563568115,
+      "one_sweep_seconds": 0.0038663968443870544,
+      "ratio": 9.523030645220343,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    },
+    {
+      "branches": 128,
+      "repetition": 0,
+      "points": 9,
+      "independent_process_seconds": 0.02988581359386444,
+      "one_sweep_seconds": 0.0037240609526634216,
+      "ratio": 8.025060269889064,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    },
+    {
+      "branches": 128,
+      "repetition": 1,
+      "points": 9,
+      "independent_process_seconds": 0.036064598709344864,
+      "one_sweep_seconds": 0.0034681037068367004,
+      "ratio": 10.398938947024691,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    },
+    {
+      "branches": 128,
+      "repetition": 2,
+      "points": 9,
+      "independent_process_seconds": 0.03505834564566612,
+      "one_sweep_seconds": 0.005237966775894165,
+      "ratio": 6.693121042120655,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    },
+    {
+      "branches": 512,
+      "repetition": 0,
+      "points": 9,
+      "independent_process_seconds": 0.06162935867905617,
+      "one_sweep_seconds": 0.009504776448011398,
+      "ratio": 6.484040841586584,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    },
+    {
+      "branches": 512,
+      "repetition": 1,
+      "points": 9,
+      "independent_process_seconds": 0.056258972734212875,
+      "one_sweep_seconds": 0.010354209691286087,
+      "ratio": 5.433439577871346,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    },
+    {
+      "branches": 512,
+      "repetition": 2,
+      "points": 9,
+      "independent_process_seconds": 0.056694865226745605,
+      "one_sweep_seconds": 0.00809156522154808,
+      "ratio": 7.006662329775886,
+      "parity_passed": true,
+      "max_voltage_error_v": 1.8296598680578313e-09
+    }
+  ],
+  "all_parity_passed": true,
+  "median_ratios": {
+    "16": 9.523030645220343,
+    "128": 8.025060269889064,
+    "512": 6.484040841586584
+  }
+}

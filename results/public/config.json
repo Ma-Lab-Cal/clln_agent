@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "data_origin": "Fresh generic-circuit measurements, generated for this public release",
+  "simulator": "ngspice-41 : Circuit level simulation program",
+  "python": "3.13.0",
+  "source_sha256": {
+    "__init__.py": "c15cd4ef4c201aeed82811671064c8ba0b21e6a2dad0c8afa348ab488af1e2b4",
+    "__main__.py": "c1c71c115c7f5c4e4718fff350fe304b664844f3119d937561745017e85af15f",
+    "checks.py": "263734b6c7c0c1f6df0fd65d730e253056f4a8838abdfb26af2ebb6ce3130ea1",
+    "shared_benchmark.py": "584c8cae2451533ee4f784b887e4e1b9e937d775b6d210e230c2e67bd84a53a5",
+    "spice.py": "d1d3bf75e97d9e775b223d99f749b127869809c216c1b184a41cfa80ebde6e5a",
+    "studies.py": "4cadb2ef29809ac65c7ff20626c8803fb176227721037555304c65c4ea36de0d",
+    "workbench.py": "6cad574662a9d7dde8e8e0a7ef57d7ebb2e7524cda01007e9d584af8447cdcda"
+  },
+  "timing_repetitions": 3,
+  "threads_per_simulator": 1,
+  "robustness_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ]
+}
